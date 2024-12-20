@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Resumen de Datos</title>
+<style>
+    .container {
+        width: 60%;
+        margin: auto;
+        font-family: Arial, sans-serif;
+    }
+    .td {
+        background-color: #C1D3FA;
+        color: #29EE04;
+    }
+    .boton {
+        background: #21FF7D;
+        color: #000000;
+        font-weight: bold;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    th {
+        text-align-last: center;
+        background: #EDAF3E;
+        font-size: 1.2em;
+    }
+    td, th {
+        padding: 10px;
+    }
+</style>
+<script>
+    function cargarDatos() {
+        document.getElementById("nombre").textContent = localStorage.getItem("nombre");
+        document.getElementById("apellido").textContent = localStorage.getItem("apellido");
+        document.getElementById("telefono").textContent = localStorage.getItem("telefono");
+        document.getElementById("email").textContent = localStorage.getItem("email");
+        document.getElementById("cedula").textContent = localStorage.getItem("cedula");
+        document.getElementById("direccion").textContent = localStorage.getItem("direccion");
+        
+        document.getElementById("nombre_mascota").textContent = localStorage.getItem("nombre_mascota");
+        document.getElementById("tipo").textContent = localStorage.getItem("tipo");
+        document.getElementById("edad").textContent = localStorage.getItem("edad");
+        document.getElementById("raza").textContent = localStorage.getItem("raza");
+    }
+</script>
+</head>
+<body onload="cargarDatos()">
+    <table class="container" bordercolor="#000000">
+        <tr>
+            <th colspan="4">Resumen de Datos</th>
+        </tr>
+        <tr>
+            <td><label>Nombre:</label></td>
+            <td><span id="nombre"></span></td>
+        </tr>
+        <tr>
+            <td><label>Apellido:</label></td>
+            <td><span id="apellido"></span></td>
+        </tr>
+        <tr>
+            <td><label>Teléfono:</label></td>
+            <td><span id="telefono"></span></td>
+        </tr>
+        <tr>
+            <td><label>Email:</label></td>
+            <td><span id="email"></span></td>
+        </tr>
+        <tr>
+            <td><label>Cédula:</label></td>
+            <td><span id="cedula"></span></td>
+        </tr>
+        <tr>
+            <td><label>Dirección:</label></td>
+            <td><span id="direccion"></span></td>
+        </tr>
+        <tr>
+            <td><label>Nombre de la Mascota:</label></td>
+            <td><span id="nombre_mascota"></span></td>
+        </tr>
+        <tr>
+            <td><label>Tipo de Mascota:</label></td>
+            <td><span id="tipo"></span></td>
+        </tr>
+        <tr>
+            <td><label>Edad:</label></td>
+            <td><span id="edad"></span></td>
+        </tr>
+        <tr>
+            <td><label>Raza:</label></td>
+            <td><span id="raza"></span></td>
+        </tr>
+		<tr>
+      <td colspan="3" align="center"><a href="datos_persona.html" class="boton">Finalizar</a></td>
+    </tr>
+    </table>
+<br>
+</body>
+	<footer><h3 align="center" style="background: #0BF31F" class="container">2024</h3></footer>
+</html>

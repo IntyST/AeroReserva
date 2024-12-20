@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Datos del Propietario</title>
+<scrip src="../public/css/estilo.css"></scrip>
+<script>
+    function guardarDatosPropietario() {
+        localStorage.setItem("nombre", document.getElementById("nombre").value);
+        localStorage.setItem("apellido", document.getElementById("apellido").value);
+        localStorage.setItem("telefono", document.getElementById("telefono").value);
+        localStorage.setItem("email", document.getElementById("email").value);
+        localStorage.setItem("cedula", document.getElementById("cedula").value);
+        localStorage.setItem("direccion", document.getElementById("direccion").value);
+    }
+</script>
+</head>
+<body>
+    <form id="frm_datos_persona" name="frm_datos_persona" method="get" action="datos_mascota.html" onsubmit="guardarDatosPropietario()">
+        <table class="container" bordercolor="#000000">
+            <tr>
+                <th colspan="7">Datos del Propietario</th>
+            </tr>
+            <tr>
+                <td><label for="nombre">Nombre:</label></td>
+                <td>&nbsp;</td>
+                <td><input type="text" id="nombre" name="nombre" class="td" required></td>
+                <td>&nbsp;</td>
+                <td><label for="telefono">Teléfono:</label></td>
+                <td>&nbsp;</td>
+                <td><input type="text" id="telefono" name="telefono" class="td" required></td>
+            </tr>
+            <tr>
+                <td><label for="apellido">Apellido:</label></td>
+                <td>&nbsp;</td>
+                <td><input type="text" id="apellido" name="apellido" class="td" required></td>
+                <td>&nbsp;</td>
+                <td><label for="email">Correo Electrónico:</label></td>
+                <td>&nbsp;</td>
+                <td><input type="email" id="email" name="email" class="td" required></td>
+            </tr>
+            <tr>
+                <td><label for="cedula">Cédula:</label></td>
+                <td>&nbsp;</td>
+                <td><input type="text" id="cedula" name="cedula" class="td" required></td>
+                <td>&nbsp;</td>
+                <td><label for="direccion">Dirección:</label></td>
+                <td>&nbsp;</td>
+                <td><input type="text" id="direccion" name="direccion" class="td" required></td>
+            </tr>
+            <tr>
+                <td colspan="7" align="center"><input type="submit" class="boton" value="Siguiente"></td>
+            </tr>
+        </table>
+    </form>
+	<br>
+</body>
+	<footer><h3 align="center" style="background: #0BF31F" class="container">2024</h3></footer>
+</html>

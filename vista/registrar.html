@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Registro Usuario</title>
+<link href="../public/bootstrap5.3/css/bootstrap.min.css" rel="stylesheet">
+	<script src="../public/js/jquery-3.7.1.min.js"></script>
+	<script src="js/registrar.js"></script>
+</head>
+<body>
+
+<br>
+
+<div class="container bg-light border border-info p-4 w-50" style="border-radius: 20px">
+    <form id="frmRegistrar" name="frmRegistrar">
+		<img src="../img/logo.jpg" alt="AeroReserva Logo" width="100" >
+        <h1 class="h3 mb-3 fw-normal text-center">Registro de Usuario</h1>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="cedula" name="cedula" placeholder="Cédula">
+            <label for="cedula">Cédula</label>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="primerNombre" name="primerNombre" placeholder="Primer Nombre" required>
+                    <label for="primerNombre">Primer Nombre</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="segundoNombre" name="segundoNombre" placeholder="Segundo Nombre" required>
+                    <label for="segundoNombre">Segundo Nombre</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="primerApellido" name="primerApellido" placeholder="Primer Apellido">
+                    <label for="primerApellido">Primer Apellido</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="segundoApellido" name="segundoApellido" placeholder="Segundo Apellido">
+                    <label for="segundoApellido">Segundo Apellido</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-floating mb-3">
+            <select class="form-select" id="carrera" name="carrera">
+                <option selected>Seleccione una carrera</option>
+                <option value="software">Desarrollo de Software</option>
+                <option value="mecanica">Mecánica Automotriz</option>
+                <option value="redes">Redes y Telecomunicaciones</option>
+            </select>
+            <label for="carrera">Carrera</label>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección">
+                    <label for="direccion">Dirección</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo Electrónico">
+                    <label for="correo">Correo Electrónico</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+    <div class="col">
+        <div class="form-floating">
+            <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" placeholder="Fecha de Nacimiento">
+            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+        </div>
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-primary py-2" id="edad" name="edad">Ver edad</button>
+    </div>
+</div>
+
+
+        <button type="submit" class="btn btn-primary w-100 py-2" id="registrar" name="registrar">Registrar</button>
+    </form>
+        <p class="mt-5 mb-3 text-body-secondary text-center">&copy; 2024–2025</p>
+		<div class="checkbox mb-3" align="center">
+             <label>
+                <h6>¿Ya tienes cuenta?</h6>
+                 <a href="inicioSesion.html">Iniciar Sesión</a>
+             </label>
+      </div>
+</div>
+
+
+</body>
+	
+</html>

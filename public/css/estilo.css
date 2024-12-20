@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+.container {
+        width: 60%;
+        margin: auto;
+        font-family: Arial, sans-serif;
+    }
+    .td {
+        background-color: #C1D3FA;
+        color: #000000;
+    }
+    .boton {
+        background: #21FF7D;
+        color: #000000;
+        font-weight: bold;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    th {
+        text-align-last: center;
+        background: #EDAF3E;
+        font-size: 1.2em;
+    }
+    td, th {
+        padding: 10px;
+    }
+	
+	

@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Datos de la Mascota</title>
+<style>
+    .container {
+        width: 60%;
+        margin: auto;
+        font-family: Arial, sans-serif;
+    }
+    .td {
+        background-color: #C1D3FA;
+        color: #000000;
+    }
+    .boton {
+        background: #21FF7D;
+        color: #000000;
+        font-weight: bold;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    th {
+        text-align-last: center;
+        background: #EDAF3E;
+        font-size: 1.2em;
+    }
+    td, th {
+        padding: 10px;
+    }
+</style>
+<script>
+    function cargarDatosPropietario() {
+        document.getElementById("nombrePropietario").textContent = localStorage.getItem("nombre");
+        document.getElementById("apellidoPropietario").textContent = localStorage.getItem("apellido");
+        document.getElementById("cedulaPropietario").textContent = localStorage.getItem("cedula");
+        document.getElementById("telefonoPropietario").textContent = localStorage.getItem("telefono");
+        document.getElementById("emailPropietario").textContent = localStorage.getItem("email");
+        document.getElementById("direccionPropietario").textContent = localStorage.getItem("direccion");
+    }
+
+    function guardarDatosMascota() {
+        localStorage.setItem("nombre_mascota", document.getElementById("nombre_mascota").value);
+        localStorage.setItem("tipo", document.getElementById("tipo").value);
+        localStorage.setItem("edad", document.getElementById("edad").value);
+        localStorage.setItem("raza", document.getElementById("raza").value);
+    }
+</script>
+</head>
+<body onload="cargarDatosPropietario()">
+
+
+    <table class="container" bordercolor="1">
+        <tbody>
+            <tr>
+                <th colspan="3">DATOS DEL PROPIETARIO</th>
+            </tr>
+            <tr>
+                <td>Nombre:</td>
+                <td>&nbsp;</td>
+                <td><label id="nombrePropietario"></label></td>
+            </tr>
+            <tr>
+                <td>Apellido:</td>
+                <td>&nbsp;</td>
+                <td><label id="apellidoPropietario"></label></td>
+            </tr>
+            <tr>
+                <td>Cédula:</td>
+                <td>&nbsp;</td>
+                <td><label id="cedulaPropietario"></label></td>
+            </tr>
+            <tr>
+                <td>Teléfono:</td>
+                <td>&nbsp;</td>
+                <td><label id="telefonoPropietario"></label></td>
+            </tr>
+            <tr>
+                <td>Correo Electrónico:</td>
+                <td>&nbsp;</td>
+                <td><label id="emailPropietario"></label></td>
+            </tr>
+            <tr>
+                <td>Dirección:</td>
+                <td>&nbsp;</td>
+                <td><label id="direccionPropietario"></label></td>
+            </tr>
+        </tbody>
+    </table>
+	<br>
+	<hr>
+	<br>
+    <form id="frm_mascota" name="frm_mascota" method="get" action="resumen_datos.html" onsubmit="guardarDatosMascota()">
+    <table class="container" bordercolor="#000000">
+        <tr>
+            <th colspan="3">Datos de la Mascota</th>
+        </tr>
+        <tr>
+            <td><label for="nombre_mascota">Nombre de la Mascota:</label></td>
+            <td>&nbsp;</td>
+            <td><input type="text" id="nombre_mascota" name="nombre_mascota" class="td" required></td>
+        </tr>
+        <tr>
+            <td><label for="tipo">Tipo de Mascota:</label></td>
+            <td>&nbsp;</td>
+            <td>
+                <select id="tipo" name="tipo" class="td" required>
+                    <option value="">Selecciona un tipo</option>
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Ave">Ave</option>
+                    <option value="Reptil">Reptil</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="edad">Edad:</label></td>
+            <td>&nbsp;</td>
+            <td><input type="number" id="edad" name="edad" class="td" required></td>
+        </tr>
+        <tr>
+            <td><label for="raza">Raza:</label></td>
+            <td>&nbsp;</td>
+            <td><input type="text" id="raza" name="raza" class="td" required></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><input type="submit" class="boton" value="Siguiente"></td>
+        </tr>
+    </table>
+</form>
+
+<br>
+</body>
+	<footer><h3 align="center" style="background: #0BF31F" class="container">2024</h3></footer>
+</html>

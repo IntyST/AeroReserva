@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tarea 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E8F5E9; 
+            color: #FB8D08; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #C8E6C9;
+            border: 2px solid #FB8D08; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+        }
+
+        th {
+            color: #1B5E20; 
+            font-size: 1.5em;
+            padding: 10px 0;
+            border-bottom: 2px solid #FB8D08;
+        }
+
+        td {
+            padding: 10px 5px;
+            font-size: 1.1em;
+            color: #2E7D32;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: calc(100% - 22px);
+            border: 2px solid #81C784;
+            border-radius: 5px;
+            outline: none;
+            font-size: 1em;
+        }
+
+        
+		.boton {
+            background-color: #FB8D08;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        
+
+        #resultado {
+            background-color: #A5D6A7; 
+            color: #1B5E20;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 500px) {
+            .container {
+                width: 100%;
+            }
+
+            th {
+                font-size: 1.2em;
+            }
+
+            td {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+	
+    <div class="container">
+        <table>
+            <tbody>
+                <tr>
+                    <th colspan="3">TAREA 2</th>
+                </tr>
+                <tr>
+                    <td>Ingrese su nombre:</td>
+                    <td>&nbsp;</td>
+                    <td><input type="text" name="nombreIngresaso" id="nombreIngresado"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <input class="boton" type="button" value="Aceptar" onclick="procesarNombre()">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <input type="text" id="resultado" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+    function procesarNombre() {
+        
+        const nombre = document.getElementById("nombreIngresado").value.trim();
+
+        
+        if (nombre === "") {
+            alert("Por favor, ingrese un nombre.");
+            return; 
+        }
+
+        
+        let alternado = "";
+        for (let i = 0; i < nombre.length; i++) {
+            alternado += (i % 2 === 0) ? nombre[i].toUpperCase() : nombre[i].toLowerCase();
+        }
+        alert("Resultado 1: " + alternado);
+
+        
+        const partes = nombre.split(" ");
+        const ordenInverso = partes.reverse().join(" ");
+        alert("Resultado 2: " + ordenInverso);
+
+        
+        let sumaAscii = 0;
+        let valoresAscii = "";
+        for (let i = 0; i < nombre.length; i++) {
+            const ascii = nombre.charCodeAt(i);
+            valoresAscii += `${nombre[i]}: ${ascii}\n`;
+            sumaAscii += ascii;
+        }
+        alert(`Resultado 3:  ${valoresAscii}Total: ${sumaAscii}`);
+
+        const nombreReverso = nombre.split("").reverse().join("").toUpperCase();
+        document.getElementById("resultado").value = nombreReverso;
+    }
+</script>
+
+</body>
+</html>
